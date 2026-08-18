@@ -1,33 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ajay's Birthday Surprise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ajay's Birthday Vault</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial, sans-serif;
+background:linear-gradient(135deg,#000000,#8b0000,#000000);
+color:white;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+padding:40px;
+border:3px solid red;
+border-radius:25px;
+background:rgba(0,0,0,0.75);
+box-shadow:0 0 25px red;
+width:80%;
+max-width:500px;
+}
+
+h1{
+font-size:2.5em;
+color:#ff2d2d;
+text-shadow:0 0 15px red;
+}
+
+p{
+font-size:1.1em;
+}
+
+input{
+padding:12px;
+width:70%;
+border:none;
+border-radius:10px;
+font-size:16px;
+text-align:center;
+margin-top:10px;
+}
+
+button{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:red;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff4444;
+}
+
+#message{
+margin-top:15px;
+font-weight:bold;
+font-size:18px;
+}
+
+.spider{
+font-size:60px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+</style>
 </head>
 
-<body style="background:black; color:white; text-align:center; font-family:Arial;">
+<body>
 
-<h1>🕷️ Spider-Man Security System 🕷️</h1>
+<div class="container">
 
-<p>Enter Passcode to Access Birthday Files</p>
+<div class="spider">🕷️</div>
 
-<input type="password" id="pass">
+<h1>Spider-Man Birthday Vault</h1>
 
-<button onclick="checkPassword()">Enter</button>
+<p>Only the Birthday Hero may enter.</p>
+
+<input type="password" id="pass" placeholder="Enter Secret Passcode">
+
+<br>
+
+<button onclick="checkPassword()">Unlock Vault</button>
 
 <p id="message"></p>
 
+</div>
+
 <script>
-function checkPassword() {
+function checkPassword(){
 
 let password = document.getElementById("pass").value;
 
-if(password === "1409") {
+if(password === "1409"){
+
 document.getElementById("message").innerHTML =
-"✅ Access Granted! Happy Birthday Ajay!";
-}
-else {
+"🎉 Access Granted! Happy 19th Birthday Juu!";
+
+setTimeout(function(){
+window.location.href="welcome.html";
+},2000);
+
+}else{
+
 document.getElementById("message").innerHTML =
-"❌ Wrong Passcode. Try Again.";
+"❌ Wrong Passcode. Try Again, Web-Slinger!";
 }
 }
 </script>
