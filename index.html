@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajay's Birthday Surprise</title>
+</head>
+
+<body style="background:black; color:white; text-align:center; font-family:Arial;">
+
+<h1>🕷️ Spider-Man Security System 🕷️</h1>
+
+<p>Enter Passcode to Access Birthday Files</p>
+
+<input type="password" id="pass">
+
+<button onclick="checkPassword()">Enter</button>
+
+<p id="message"></p>
+
+<script>
+function checkPassword() {
+
+let password = document.getElementById("pass").value;
+
+if(password === "1409") {
+document.getElementById("message").innerHTML =
+"✅ Access Granted! Happy Birthday Ajay!";
+}
+else {
+document.getElementById("message").innerHTML =
+"❌ Wrong Passcode. Try Again.";
+}
+}
+</script>
+
+</body>
+</html>
